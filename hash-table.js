@@ -68,7 +68,11 @@ class HashTable {
 
 
   insert(key, value) {
-    // Your code here
+    try {
+      this.insertNoCollisions(key, value);
+    } catch (error) {
+      this.insertWithHashCollisions(key, value);
+    }
   }
 
 }
